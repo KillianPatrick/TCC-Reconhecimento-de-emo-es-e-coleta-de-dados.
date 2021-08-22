@@ -17,7 +17,7 @@ def geraInterface():
     root["background"] = "azure"
     root.geometry("600x300+100+100")
 
-    # PARTE DE LOGIN E SENHA
+    # PARTE DE LOGIN/SENHA
     lb8 = Label(root, text="Login: ")  # TITULO
     lb8.place(x=170, y=30)
     lb1 = Label(root, text="Login: ")
@@ -42,7 +42,7 @@ def geraInterface():
     botaologin = Button(root, width=20, text="Confirmar", command=bt_login)
     botaologin.place(x=110, y=200)
 
-    # PARTE DE CADASTRO
+    # CADASTRO
     listausuario = ["Aluno", "Professor"]
     lb4 = Label(root, text="Escolha o tipo de usuário:")
     lb4.place(x=310, y=110)
@@ -100,14 +100,11 @@ def definecoleta():
         coleta.destroy()
 
     def bt_inicio():
-        cap = cv2.VideoCapture(0)
+        cap = cv2.VideoCapture('''ID DA CAMERA''')
 
         # Carregando o treinamento do classificador.
         face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-
-        #cap = cv2.VideoCapture(0)  # FORÇA A ABERTURA DA CAMERA AQUI TEM QUE FAZER NA GUI
         # ----------------------------------------------------------------------------------------------------------------------
-
         # Iniciando a CNN para reconhecimento de emoções.
         from keras.models import model_from_json
 
