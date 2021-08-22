@@ -2,7 +2,7 @@
 from datetime import datetime
 import xlsxwriter as xw
 
-#A funcão EscreveXls vai es crever uma versão tabelada dos dados coletados
+#A funcão EscreveXls vai escrever uma versão tabelada dos dados coletados
 def EscreveXls(emotion, nEmotion, tEmotion, totalEmotion):
     row_n = 0
     col_n = 0
